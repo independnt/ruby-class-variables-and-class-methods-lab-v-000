@@ -21,7 +21,9 @@ class Song
   end
 
   def self.genres
-    @@genres.map {|g| g unless include?(g)}
+    gen = []
+    @@genres.map {|g| gen << g unless gen.include?(g)}
+    gen
   end
 
   def self.artists

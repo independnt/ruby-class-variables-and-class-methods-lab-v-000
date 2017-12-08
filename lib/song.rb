@@ -33,7 +33,9 @@ class Song
   end
 
   def self.genre_count
-
+    g_hash = {}
+    @@genres.map{|g|g_hash[g] = g.count}
+    g_hash
   end
 
 end

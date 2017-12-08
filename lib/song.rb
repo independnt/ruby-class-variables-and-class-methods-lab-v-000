@@ -23,6 +23,7 @@ class Song
   def self.genre
     genres = []
     @@genre.map {|g| genres << g unless genres include?(g)}
+    genres
   end
 
   def self.artists

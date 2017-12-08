@@ -3,7 +3,7 @@ class Song
   attr_accessor :name, :artist, :genre
 
   @@count = 0
-  @@genre = []
+  @@genres = []
   @@artists = []
 
 
@@ -12,7 +12,7 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    @@genre << genre
+    @@genres << genre
     @@artists << artist
   end
 
@@ -22,7 +22,7 @@ class Song
 
   def self.genre
     genres = []
-    @@genre.map {|g| genres << g unless genres include?(g)}
+    @@genres.map {|g| genres << g unless genres include?(g)}
     genres
   end
 

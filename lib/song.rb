@@ -27,8 +27,8 @@ class Song
   end
 
   def self.artists
-    artists = []
-    @@artists.map {|a| artists << a unless artists include?(a)}
+    art = []
+    @@artists.map {|a| art << a unless art.include?(a)}
   end
 
   def self.genre_count

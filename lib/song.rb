@@ -20,7 +20,7 @@ class Song
     @@count
   end
 
-  def self.genre
+  def self.genres
     @@genres.map {|g| g unless include?(g)}
   end
 

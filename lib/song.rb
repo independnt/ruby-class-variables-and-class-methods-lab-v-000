@@ -4,7 +4,7 @@ class Song
   @@count = 0
   @@genre = []
   @@artists = []
-  
+
 
   def initialize(name, artist, genre)
     @name = name
@@ -28,6 +28,9 @@ class Song
     artists = []
     @@artists.map {|a| artists << a unless artists include?(a)}
   end
-  
+
+  def self.genre_count
+
+  end
 
 end
